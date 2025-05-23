@@ -1,5 +1,20 @@
 {
+  "name": "fitness-ai",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && vite",
+    "dev:server": "cd server && node server.cjs",
+    "build": "cd client && vite build",
+    "start": "node server/server.cjs"
+  },
   "dependencies": {
-    "zustand": "^5.0.4"
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "vite": "^6.3.5"
   }
 }

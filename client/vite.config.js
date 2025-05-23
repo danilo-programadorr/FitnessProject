@@ -1,25 +1,17 @@
-/*import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  server: {
-    proxy: {
-      '/api': 'http://localhost:3001'  
+  resolve: {
+    alias: {
+      '@stores': path.resolve(__dirname, './src/stores'),
+      '@components': path.resolve(__dirname, './src/components'),
+      '@contexts': path.resolve(__dirname, './src/contexts'),
+      '@utils': path.resolve(__dirname, './src/utils'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
+      '@assets': path.resolve(__dirname, './src/assets'),
     }
   }
-})
-server: {
-  watch: {
-    usePolling: true  // Melhora o watch em alguns sistemas Windows
-  }
-}*/
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  css: {
-    postcss: './postcss.config.cjs' // Caminho explícito
-  }
-})
+});
