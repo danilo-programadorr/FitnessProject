@@ -4,14 +4,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.cjs",
-    "dev": "nodemon main.cjs"
+    "start": "node server.mjs",
+    "dev": "nodemon server.mjs",
+    "prod": "NODE_ENV=production node server.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "react-router-dom": "^7.6.0"
   },

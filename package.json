@@ -10,8 +10,10 @@
     "start": "node server/server.cjs"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
