@@ -1,5 +1,9 @@
-
 # 🏋️‍♂️ **FitnessServer - API Backend para Projeto Fitness**
+
+![Node.js](https://img.shields.io/badge/node-%3E=18.x-green)
+![Express](https://img.shields.io/badge/express-4.x-blue)
+[![License](https://img.shields.io/github/license/danilo-programadorr/FitnessServer)](https://github.com/danilo-programadorr/FitnessServer)
+
 
 🚀 Este é o backend do projeto **FitnessServer**, uma API robusta desenvolvida em **Node.js + Express** que conecta o frontend a serviços externos como **Supabase, Stripe, OpenAI, Google Cloud e Fish.audio**. 
 
@@ -196,6 +200,10 @@ Quer contribuir? Faça um fork, crie sua branch (`git checkout -b feature-nome`)
 - 🔒 JWT + Middlewares
 
 ---
+## 🧪 Testes
+
+> Em breve! Sinta-se à vontade para contribuir com testes automatizados usando Jest, Mocha, ou sua lib favorita.
+
 
 ## 🚀 **Autor**
 
