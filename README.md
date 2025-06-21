@@ -17,19 +17,20 @@
 /fitnessServer
   /server
     /certs              → Certificados SSL (local, ignorado no git)
-    /src
-      /config           → Configurações (ex.: Supabase)
-      /controllers      → Controllers da API
-      /middleware       → Middlewares (auth, rate limit, etc.)
-      /routes           → Rotas da API
-      /services         → Serviços externos (OpenAI, Stripe, etc.)
-      /utils            → Funções auxiliares
-      app.js            → Configuração principal do Express
-      server.js         → Inicialização do servidor
-  /client               → Frontend (React + Vite)
-  .env.local            → Variáveis de ambiente (IGNORADO no git)
-  package.json          → Dependências
+    /config             → Configurações (ex.: Supabase)
+    /controllers        → Controllers da API
+    /middleware         → Middlewares (auth, rate limit, etc.)
+    /routes             → Rotas da API
+    /lib                → Serviços externos (OpenAI, Stripe, etc.)
+    /utils              → Funções auxiliares
+    index.js            → Configuração principal do Express
+    gerar-token.js      → Script utilitário
+    openssl.cnf         → Configuração SSL local
+    package.json        → Dependências do backend
+    package-lock.json   → Lockfile do npm
+  .env                  → Variáveis de ambiente (IGNORADO no git)
   README.md             → Este arquivo
+
 ```
 
 ---
@@ -136,6 +137,24 @@ yarn dev
 | GET    | `/api/user/profile`  | Retorna dados do usuário      |
 | POST   | `/api/payment/create-session` | Cria sessão Stripe  |
 | POST   | `/api/ai/chat`       | Envia mensagem para OpenAI    |
+
+## 📦 **Exemplos de Uso das Rotas**
+# Login
+curl -X POST http://localhost:5000/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"user@exemplo.com","password":"senha"}'
+
+# Registro
+curl -X POST http://localhost:5000/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{"email":"user@exemplo.com","password":"senha"}'
+
+# Chat IA
+curl -X POST http://localhost:5000/api/ai/chat \
+  -H "Authorization: Bearer SEU_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"message":"Olá, IA!"}'
+
 
 > ⚙️ Outras rotas específicas estão na pasta `/routes`.
 
