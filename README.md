@@ -226,5 +226,5 @@ Quer contribuir? Faça um fork, crie sua branch (`git checkout -b feature-nome`)
 
 ## 🚀 **Autor**
 
-> Feito com ❤️ por **[@danilo-programadorr](https://github.com/seuGithub)**
+> Feito com ❤️ por **[@danilo-programadorr](https://github.com/danilo-programadorr)**
 
