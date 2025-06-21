@@ -139,17 +139,17 @@ yarn dev
 | POST   | `/api/ai/chat`       | Envia mensagem para OpenAI    |
 
 ## 📦 **Exemplos de Uso das Rotas**
-# Login
+### Login
 curl -X POST http://localhost:5000/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"user@exemplo.com","password":"senha"}'
 
-# Registro
+### Registro
 curl -X POST http://localhost:5000/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"email":"user@exemplo.com","password":"senha"}'
 
-# Chat IA
+### Chat IA
 curl -X POST http://localhost:5000/api/ai/chat \
   -H "Authorization: Bearer SEU_TOKEN" \
   -H "Content-Type: application/json" \
